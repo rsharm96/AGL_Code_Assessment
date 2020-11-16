@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@foreach(var petList in Model)
+{
+    <table>
+        <tr>
+            <td>
+                <h2> <span>@petList.OwnerGender</span></h2>
+                @foreach (var pet in petList.PetNames)
+                {
+                    <table>
+                        <tr>
+                            <td>@pet</td>
+                        </tr>
+                    </table>
+                }
+            </td>
+        </tr>
+    </table>
+
+}
+
